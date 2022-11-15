@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "allerbold";
+    src: url("/assets/fonts/aller_bd-webfont.woff2") format("woff2"),
+      url("/assets/fonts/aller_bd-webfont.woff") format("woff"),
+      url("/assets/fonts/aller_bd-webfont.svg#allerbold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+  /* roboto-300 - latin */
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local("Roboto Light"), local("Roboto-Light"),
+      url("/assets/fonts/roboto-v20-latin-300.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("/assets/fonts/roboto-v20-latin-300.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* roboto-regular - latin */
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Roboto"), local("Roboto-Regular"),
+      url("/assets/fonts/roboto-v20-latin-regular.woff2") format("woff2"),
+      /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url("/assets/fonts/roboto-v20-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/roboto-black-webfont.woff2") format("woff2"),
+      url("/assets/fonts/roboto-black-webfont.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/roboto-bold-webfont.woff2") format("woff2"),
+      url("/assets/fonts/roboto-bold-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+}
