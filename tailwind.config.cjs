@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         primary: "#323E4F",
         "hover-green": "#00C6A7",
+        "background-light-blue": "#D1DFDF",
       },
       fontFamily: {
         aller: "allerbold, serif",

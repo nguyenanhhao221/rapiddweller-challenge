@@ -49,4 +49,13 @@
     font-style: normal;
     font-display: swap;
   }
+  h2 {
+    @apply text-3xl font-bold text-primary;
+  }
+}
+
+@layer utilities {
+  .wrapper {
+    @apply mx-auto max-w-[1300px];
+  }
 }

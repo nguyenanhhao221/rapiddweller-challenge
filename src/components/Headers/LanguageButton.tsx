@@ -1,5 +1,5 @@
 import React from "react";
-import EngLogo from "../../public/assets/images/en.svg";
+import EngLogo from "../../../public/assets/images/en.svg";
 import Image from "next/image";
 
 export const LanguageButton = () => {

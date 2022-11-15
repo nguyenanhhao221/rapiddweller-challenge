@@ -1,6 +1,7 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import { Header } from "../components/Header";
+import { FunctionSection } from "../components/FunctionSection";
+import { Header } from "../components/Headers/Header";
 import { Hero } from "../components/Hero/Hero";
 
 const Home: NextPage = () => {
@@ -9,6 +10,10 @@ const Home: NextPage = () => {
       <Head>
         <meta
           name="description"
+          content="Benerator is the smart way to generate, migrate, obfuscate (anonymize / pseudonymize) data for testing based on easy to maintain datamodels."
+        ></meta>
+        <meta
+          property="og:description"
           content="Benerator is the smart way to generate, migrate, obfuscate (anonymize / pseudonymize) data for testing based on easy to maintain datamodels."
         ></meta>
         <link rel="icon" href="/favicon.ico" />
@@ -23,6 +28,9 @@ const Home: NextPage = () => {
       <main>
         <section id="hero">
           <Hero />
+        </section>
+        <section id="functions">
+          <FunctionSection />
         </section>
       </main>
     </>
