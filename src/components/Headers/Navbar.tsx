@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
+//TODO Update correct link to page
 export const Navbar = () => {
   return (
     <ul className="flex flex-col gap-4 text-white md:flex-row">
