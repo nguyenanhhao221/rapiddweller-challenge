@@ -16,15 +16,13 @@ I used the meta tag in the `<head>` of html to prevent crawler/bot to indexing t
 
 ```html
  <meta name="robots" content="noindex"></meta>
+ <meta name="robots" content="nofollow"></meta>
  ```
 
-There is another approach which is to create a `robot.txt` file and add in the following lines:
+I also added a `robots.txt` file in the (/public) which will add another layer to make sure crawler and google adsbot bot doesn't crawl the page
 
-```plain
+```text
 User-agent: *
+User-agent: AdsBot-Google
 Disallow: /
 ```
-
-This approach would prevent bots/crawler from crawling the page, but if there is another website that have link to this page, Google will still be able to index this page.
-
-So I choose the first approach which means crawlers can still come to the page, but it prevents from indexing and won't let the page appear in the search result
