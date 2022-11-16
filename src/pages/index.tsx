@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           Benerator | Generate, obfuscate &amp; migrate test data smart | Faker
         </title>
         {/* Prevent indexing from bot */}
-        {/* <meta name="robots" content="noindex"></meta> */}
+        <meta name="robots" content="index, follow"></meta>
       </Head>
       <header>
         <Header />
