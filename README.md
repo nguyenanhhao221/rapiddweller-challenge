@@ -1,27 +1,30 @@
-# Create T3 App
+# rapiddweller Web challenge
 
-This is an app bootstrapped according to the [init.tips](https://init.tips) stack, also known as the T3-Stack.
+This project is created as part of the rapiddweller's web challenge.
 
-## What's next? How do I make an app with this?
+## Quick Overview
 
-We try to keep this project as simple as possible, so you can start with the most basic configuration and then move on to more advanced configuration.
+The requests:
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+1. Please create a WordPress website with our rapiddweller theme
 
-- [Next-Auth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [TailwindCSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+Because I don't have any experience with PHP or Wordpress, I decided to build a clone of <https://www.benerator.de/> using mainly NextJS, ReactJS, TailwindCSS instead
 
-We also [roll our own docs](https://beta.create.t3.gg) with some summary information and links to the respective documentation.
+2. Make sure this site is not indexed by any crawler/bot.
 
-Also checkout these awesome tutorials on `create-t3-app`.
+I used the meta tag in the `<head>` of html to prevent crawler/bot to indexing the page
 
-- [Build a Blog With the T3 Stack - tRPC, TypeScript, Next.js, Prisma & Zod](https://www.youtube.com/watch?v=syEWlxVFUrY)
-- [Build a Live Chat Application with the T3 Stack - TypeScript, Tailwind, tRPC](https://www.youtube.com/watch?v=dXRRY37MPuk)
-- [Build a full stack app with create-t3-app](https://www.nexxel.dev/blog/ct3a-guestbook)
-- [A first look at create-t3-app](https://dev.to/ajcwebdev/a-first-look-at-create-t3-app-1i8f)
+```html
+ <meta name="robots" content="noindex"></meta>
+ ```
 
-## How do I deploy this?
+There is another approach which is to create a `robot.txt` file and add in the following lines:
 
-Follow our deployment guides for [Vercel](https://beta.create.t3.gg/en/deployment/vercel) and [Docker](https://beta.create.t3.gg/en/deployment/docker) for more information.
+```plain
+User-agent: *
+Disallow: /
+```
+
+This approach would prevent bots/crawler from crawling the page, but if there is another website that have link to this page, Google will still be able to index this page.
+
+So I choose the first approach which means crawlers can still come to the page, but it prevents from indexing and won't let the page appear in the search result

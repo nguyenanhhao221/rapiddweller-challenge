@@ -1,10 +1,11 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
+//Hard coded value
 const testimonialArr: { source: string; quote: string; link: string }[] = [
   {
     source: "softwaretestinghelp.com, 2020",
     quote:
-      "Top 10 Test Data Generation Tools: Benerator is enlisted as one of the most popular Test Data Generation tools that are available in the market",
+      "Benerator is the perfect choice for creating consistent and complex test data synthetically or anonymized from production environments. The new BeneratorUI closes a long overdue gap.",
     link: "www.softwaretestinghelp.com/test-data-generation-tools",
   },
   {
@@ -16,7 +17,7 @@ const testimonialArr: { source: string; quote: string; link: string }[] = [
   {
     source: "sourceforge.net, Download Stats API",
     quote:
-      "Benerator has a user rating of 4.8/5 and more than 50,000 downloads on sourceforge.net",
+      "Benerator is the perfect choice for creating consistent and complex test data synthetically or anonymized from production environments. The new BeneratorUI closes a long overdue gap.",
     link: "sourceforge.net/projects/benerator/reviews",
   },
 ];
@@ -39,7 +40,7 @@ export const Testimonial = () => {
 
   return (
     <div>
-      <div className="wrapper  px-5 py-12   lg:px-24">
+      <div className="wrapper min-h-[500px] px-5 py-12 md:min-h-min lg:px-24">
         <ul className="grid grid-cols-1 text-center">
           {testimonialArr.map((testimonial, listIndex) => (
             <li

@@ -1,8 +1,11 @@
 import { type NextPage } from "next";
 import Head from "next/head";
+import { FAQ } from "../components/FAQ";
+import { Footer } from "../components/Footer/Footer";
 import { FunctionSection } from "../components/FunctionSection";
 import { Header } from "../components/Headers/Header";
 import { Hero } from "../components/Hero/Hero";
+import { IntroduceMoreSection } from "../components/IntroduceMoreSection";
 import { Shop } from "../components/Shop";
 import { SubscribeNews } from "../components/SubscribeNews";
 import { Testimonial } from "../components/Testimonial";
@@ -25,6 +28,8 @@ const Home: NextPage = () => {
         <title>
           Benerator | Generate, obfuscate &amp; migrate test data smart | Faker
         </title>
+        {/* Prevent indexing from bot */}
+        <meta name="robots" content="noindex"></meta>
       </Head>
       <header>
         <Header />
@@ -48,7 +53,16 @@ const Home: NextPage = () => {
         <section id="testimonial">
           <Testimonial />
         </section>
+        <section id="introduce-more">
+          <IntroduceMoreSection />
+        </section>
+        <section id="faq">
+          <FAQ />
+        </section>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };
