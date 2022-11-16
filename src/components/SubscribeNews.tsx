@@ -1,5 +1,4 @@
 import React from "react";
-import { CTAButton } from "./CTAButton";
 
 export const SubscribeNews = () => {
   return (

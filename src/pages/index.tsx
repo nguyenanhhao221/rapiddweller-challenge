@@ -3,7 +3,7 @@ import Head from "next/head";
 import { FunctionSection } from "../components/FunctionSection";
 import { Header } from "../components/Headers/Header";
 import { Hero } from "../components/Hero/Hero";
-import { Shop } from "../components/Shop/Shop";
+import { Shop } from "../components/Shop";
 import { SubscribeNews } from "../components/SubscribeNews";
 import { UISection } from "../components/UISection";
 
