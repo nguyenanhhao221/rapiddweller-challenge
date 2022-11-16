@@ -21,6 +21,16 @@ module.exports = {
         sans: ["Roboto", ...defaultTheme.fontFamily.sans],
       },
     },
+    keyframes: {
+      "fade-in-out": {
+        "0%, 10%": { opacity: 0.7 },
+        "30%": { opacity: 1 },
+        "100%": { opacity: 0 },
+      },
+    },
+    animation: {
+      "fade-in-out": "fade-in-out 5.2s ease-in-out infinite",
+    },
   },
   plugins: [],
 };
