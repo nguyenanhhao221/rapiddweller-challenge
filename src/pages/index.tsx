@@ -1,6 +1,6 @@
 import { type NextPage } from "next";
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import { DateClock } from "../components/DateClock";
 import { FAQ } from "../components/FAQ";
 import { Footer } from "../components/Footer/Footer";
 import { FunctionSection } from "../components/FunctionSection";
@@ -11,6 +11,11 @@ import { Shop } from "../components/Shop";
 import { SubscribeNews } from "../components/SubscribeNews";
 import { Testimonial } from "../components/Testimonial";
 import { UISection } from "../components/UISection";
+
+// Need to be dynamically import and set server-side rendering to false to make sure this component only render on the Client side and NextJS don't pre-render this component, since the value of the component live update it might cause error on the server side if we allow NextJS to pre-render
+const DateClock = dynamic(() => import("../components/DateClock"), {
+  ssr: false,
+});
 
 const Home: NextPage = () => {
   return (
