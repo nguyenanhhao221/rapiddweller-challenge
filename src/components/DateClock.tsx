@@ -19,7 +19,7 @@ const DateClock = () => {
   useEffect(() => {
     const timeOutID = setTimeout(() => {
       setDate(new Date());
-    }, 1000 * 60);
+    }, 1000);
     return () => clearTimeout(timeOutID);
   }, [date]);
 
