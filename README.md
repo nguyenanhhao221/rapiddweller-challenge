@@ -6,11 +6,13 @@ This project is created as part of the rapiddweller's web challenge.
 
 The requests:
 
-1. Please create a WordPress website with our rapiddweller theme
+### 1) Please create a WordPress website with our rapiddweller theme
 
 Because I don't have any experience with PHP or Wordpress, I decided to build a clone of <https://www.benerator.de/> using mainly NextJS, ReactJS, TailwindCSS instead
 
-2. Make sure this site is not indexed by any crawler/bot.
+The URL of the page is at: <https://rapiddweller-challenge.vercel.app>
+
+### 2) Make sure this site is not indexed by any crawler/bot
 
 I used the meta tag in the `<head>` of html to prevent crawler/bot to indexing the page
 
@@ -23,6 +25,41 @@ I also added a `robots.txt` file in the (/public) which will add another layer t
 
 ```text
 User-agent: *
+Disallow: /
 User-agent: AdsBot-Google
 Disallow: /
 ```
+
+### 3) Install the following Google Analytics Tracking-Code in 2 different ways MEASUREMENT ID: G-K74HTLPG33
+
+The following `<script>` tag in the `_app.tsx` file is added to the page to use Google Analytics
+Note: `<Script>` tag is a special components used by NextJS framework to manually add in `<script>` to the page
+
+```jsx
+  <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-K74HTLPG33`}
+      />
+      <Script id="google-analytics" strategy="lazyOnload">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-K74HTLPG33', {
+              page_path: window.location.pathname,
+            });
+                `}
+      </Script>
+```
+
+### 4) Create a shortcode [rapiddweller-time-vn] and use it in the theme footer
+
+a) Add the shortcode as function in the functions.php
+
+b) The shortcode should display the date/time as in the following example: 12-Dec-2022@13:55 (HCM) (hint: d-Y-M H:i)
+
+The time function is added in the footer of the page. It display the current date and time follow the Browser's of the user date.
+
+I use a the component `DateClock.tsx` to add this date, once the component render to the page, it will only display the time in that exact moment.
+
+But with the help of the `useEffect` hook from React, the date and time will get updated after every 1 second. In other words, after each second the component will re-render with the latest time and date display to the user

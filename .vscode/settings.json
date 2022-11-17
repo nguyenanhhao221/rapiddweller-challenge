@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["allerbold", "Benerator", "datamodels", "rapiddweller"]
+  "cSpell.words": ["allerbold", "Benerator", "datamodels", "rapiddweller"],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

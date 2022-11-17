@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Location } from "./Location";
 
 // Create a shortcode [rapiddweller-time-vn] and use it in the theme footer.
 
@@ -20,7 +19,7 @@ export const DateClock = () => {
   useEffect(() => {
     const timeOutID = setTimeout(() => {
       setDate(new Date());
-    }, 1000 * 60);
+    }, 1000);
     return () => clearTimeout(timeOutID);
   }, [date]);
 
@@ -32,7 +31,6 @@ export const DateClock = () => {
           timeStyle: "short",
         }).format(date)}
       </div>
-      <Location />
     </div>
   );
 };

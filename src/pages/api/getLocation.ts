@@ -22,6 +22,7 @@ const handler = async (
       const jsonResponse: { city: string } = await response.json();
       return res.status(200).json({ data: { city: jsonResponse.city } });
     }
+    throw new Error("Network error");
   } catch (error) {
     console.error(error);
     if (error instanceof Error) {
