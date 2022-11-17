@@ -1,5 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
+import { DateClock } from "../components/DateClock";
 import { FAQ } from "../components/FAQ";
 import { Footer } from "../components/Footer/Footer";
 import { FunctionSection } from "../components/FunctionSection";
@@ -63,6 +64,7 @@ const Home: NextPage = () => {
       </main>
       <footer>
         <Footer />
+        <DateClock />
       </footer>
     </>
   );

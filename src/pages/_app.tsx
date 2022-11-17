@@ -19,7 +19,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
             });
                 `}
       </Script>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 };
