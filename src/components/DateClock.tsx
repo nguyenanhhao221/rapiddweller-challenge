@@ -9,12 +9,12 @@ import { Location } from "./Location";
 
 /**
  * This component display the Date and Time using the Browser Date. The Idea is when this component first mount, we use the Date object to get the current Date and Time from the Browser and display it to the user.
- * Along side that, the useEffect hook will fire a function to "reset" the date state every 60 seconds with the latest Date Object.
+ * Along side that, the useEffect hook will fire a function to "reset" the date state every 1 second with the latest Date Object.
  * In other words, the component will re-render every 60s to display to the user the latest time.
  *
  * @returns Date Time Format
  */
-export const DateClock = () => {
+const DateClock = () => {
   const [date, setDate] = useState<Date>(new Date());
 
   useEffect(() => {
@@ -36,3 +36,5 @@ export const DateClock = () => {
     </div>
   );
 };
+
+export default DateClock;
