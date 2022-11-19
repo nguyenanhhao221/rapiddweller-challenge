@@ -26,7 +26,7 @@ const DateClock = () => {
 
   return (
     <div>
-      <div>
+      <div className="bg-primary py-10 text-center text-white">
         <time>
           {/* The Date */}
           {formatDate(date, {
@@ -41,7 +41,8 @@ const DateClock = () => {
             hour: "numeric",
             minute: "numeric",
           })}
-        </time>
+        </time>{" "}
+        <span>(HCM)</span>
       </div>
     </div>
   );

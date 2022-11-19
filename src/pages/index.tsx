@@ -17,10 +17,6 @@ const DateClock = dynamic(() => import("../components/DateClock"), {
   ssr: false,
 });
 
-const Location = dynamic(() => import("../components/Location"), {
-  ssr: false,
-});
-
 const Home: NextPage = () => {
   return (
     <>
@@ -71,11 +67,10 @@ const Home: NextPage = () => {
           <FAQ />
         </section>
       </main>
-      <footer>
+      <footer id="footer">
         <Footer />
         <div className="bg-primary py-10 text-center text-white">
           <DateClock />
-          <Location />
         </div>
       </footer>
     </>
