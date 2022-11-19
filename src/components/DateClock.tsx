@@ -26,10 +26,27 @@ const DateClock = () => {
   return (
     <div className="bg-primary py-10 text-center text-white">
       <div>
-        {new Intl.DateTimeFormat("en-GB", {
-          dateStyle: "long",
-          timeStyle: "short",
-        }).format(date)}
+        <time>
+          {new Intl.DateTimeFormat("en-GB", {
+            month: "short",
+            day: "2-digit",
+            year: "numeric",
+            localeMatcher: "lookup",
+          })
+            .format(date)
+            .split(" ")
+            .join("-")}
+        </time>
+        @
+        <time>
+          {new Intl.DateTimeFormat("en-GB", {
+            hour: "numeric",
+            minute: "numeric",
+          })
+            .format(date)
+            .split(" ")
+            .join("-")}
+        </time>
       </div>
     </div>
   );
