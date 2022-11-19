@@ -58,13 +58,15 @@ a) Add the shortcode as function in the functions.php
 
 b) The shortcode should display the date/time as in the following example: 12-Dec-2022@13:55 (HCM) (hint: d-Y-M H:i)
 
-The time function is added in the footer of the page. It display the current date and time follow the Browser's of the user date.
+The time function is added in the footer of the page.
 
 I use a the component `DateClock.tsx` to add this date, once the component render to the page, it will only display the time in that exact moment.
 
 But with the help of the `useEffect` hook from React, the date and time will get updated after every 1 second. In other words, after each second the component will re-render with the latest time and date display to the user
 
 Using the helper function `formatDate.ts` I was able to display the date and time followed the format requested
+
+Notes: The time and date will also display based on the Ho Chi Minh city / Vietnam timezone no matter the location of the client / server
 
 ## Technologies
 
