@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { formatDate } from "../utils/formatDate";
 
 // Create a shortcode [rapiddweller-time-vn] and use it in the theme footer.
 
@@ -27,25 +28,19 @@ const DateClock = () => {
     <div className="bg-primary py-10 text-center text-white">
       <div>
         <time>
-          {new Intl.DateTimeFormat("en-GB", {
+          {/* The Date */}
+          {formatDate(date, {
             month: "short",
             day: "2-digit",
             year: "numeric",
-            localeMatcher: "lookup",
           })
-            .format(date)
             .split(" ")
             .join("-")}
-        </time>
-        @
-        <time>
-          {new Intl.DateTimeFormat("en-GB", {
+          @{/* The Time */}
+          {formatDate(date, {
             hour: "numeric",
             minute: "numeric",
-          })
-            .format(date)
-            .split(" ")
-            .join("-")}
+          })}
         </time>
       </div>
     </div>
