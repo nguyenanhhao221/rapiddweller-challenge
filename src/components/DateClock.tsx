@@ -25,7 +25,7 @@ const DateClock = () => {
   }, [date]);
 
   return (
-    <div className="bg-primary py-10 text-center text-white">
+    <div>
       <div>
         <time>
           {/* The Date */}

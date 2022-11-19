@@ -20,9 +20,14 @@ const handler = async (
     if (response.ok) {
       // * The API will return an object with lots of different keys, but since we only care about the "city" key, we just typed the response as follow for easy usage
       const jsonResponse: { city: string } = await response.json();
-      return res.status(200).json({ data: { city: jsonResponse.city } });
+      //Cache the response
+      res.setHeader("Cache-Control", "s-maxage=86400");
+      res.status(200).json({ data: { city: jsonResponse.city } });
+      return;
     }
-    throw new Error("Network error");
+    console.log(response.statusText);
+    console.log(response.status);
+    return res.status(404).send({ message: response.statusText });
   } catch (error) {
     console.error(error);
     if (error instanceof Error) {

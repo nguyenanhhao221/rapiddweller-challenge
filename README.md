@@ -64,6 +64,8 @@ I use a the component `DateClock.tsx` to add this date, once the component rende
 
 But with the help of the `useEffect` hook from React, the date and time will get updated after every 1 second. In other words, after each second the component will re-render with the latest time and date display to the user
 
+Using the helper function `formatDate.ts` I was able to display the date and time followed the format requested
+
 ## Technologies
 
 This project is created using the following technologies:
