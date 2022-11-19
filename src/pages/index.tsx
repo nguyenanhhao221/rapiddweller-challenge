@@ -60,7 +60,7 @@ const Home: NextPage = () => {
         <section id="testimonial">
           <Testimonial />
         </section>
-        <section id="introduce-more">
+        <section id="contact">
           <IntroduceMoreSection />
         </section>
         <section id="faq">
